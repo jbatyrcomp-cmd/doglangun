@@ -159,6 +159,39 @@ class SoundEngine {
       this.musicTimeout = null;
     }
   }
+
+  playBirthdaySong() {
+    const audio = document.getElementById('birthdaySong');
+    if (!audio) return;
+    this.stopBirthdayMelody();
+    const playPromise = audio.play();
+    if (playPromise !== undefined) {
+      playPromise.then(() => {
+        this.isPlayingMusic = true;
+        document.body.classList.add('music-playing');
+        const musicLabel = document.getElementById('musicBtnLabel');
+        if (musicLabel) musicLabel.textContent = 'Aýdymy Sakla';
+      }).catch((err) => {
+        console.warn("Song play failed, fallback to synth melody:", err);
+        this.startBirthdayMelody();
+        document.body.classList.add('music-playing');
+        const musicLabel = document.getElementById('musicBtnLabel');
+        if (musicLabel) musicLabel.textContent = 'Aýdymy Sakla';
+      });
+    }
+  }
+
+  stopBirthdaySong() {
+    const audio = document.getElementById('birthdaySong');
+    if (audio) {
+      audio.pause();
+    }
+    this.stopBirthdayMelody();
+    this.isPlayingMusic = false;
+    document.body.classList.remove('music-playing');
+    const musicLabel = document.getElementById('musicBtnLabel');
+    if (musicLabel) musicLabel.textContent = 'Aýdymy Başlat';
+  }
 }
 
 const sounds = new SoundEngine();
@@ -636,20 +669,58 @@ window.addEventListener('DOMContentLoaded', () => {
   setupNumberCounters();
   setupBalloons();
 
-  // Music Toggle
+  // Song Player Controls
   const musicBtn = document.getElementById('musicToggleBtn');
   const musicLabel = document.getElementById('musicBtnLabel');
-  musicBtn.addEventListener('click', () => {
-    if (sounds.isPlayingMusic) {
-      document.body.classList.remove('music-playing');
-      musicLabel.textContent = 'Sazy Başlat';
-      sounds.stopBirthdayMelody();
-    } else {
+  const birthdaySong = document.getElementById('birthdaySong');
+  const songFileInput = document.getElementById('songFileInput');
+  const changeSongBtn = document.getElementById('changeSongBtn');
+
+  if (musicBtn) {
+    musicBtn.addEventListener('click', () => {
+      if (sounds.isPlayingMusic || (birthdaySong && !birthdaySong.paused)) {
+        sounds.stopBirthdaySong();
+      } else {
+        sounds.playBirthdaySong();
+      }
+    });
+  }
+
+  if (birthdaySong) {
+    birthdaySong.addEventListener('play', () => {
+      sounds.isPlayingMusic = true;
       document.body.classList.add('music-playing');
-      musicLabel.textContent = 'Sazy Sakla';
-      sounds.startBirthdayMelody();
-    }
-  });
+      if (musicLabel) musicLabel.textContent = 'Aýdymy Sakla';
+    });
+
+    birthdaySong.addEventListener('pause', () => {
+      sounds.isPlayingMusic = false;
+      document.body.classList.remove('music-playing');
+      if (musicLabel) musicLabel.textContent = 'Aýdymy Başlat';
+    });
+
+    birthdaySong.addEventListener('ended', () => {
+      sounds.isPlayingMusic = false;
+      document.body.classList.remove('music-playing');
+      if (musicLabel) musicLabel.textContent = 'Aýdymy Başlat';
+    });
+  }
+
+  // Choose custom song file
+  if (changeSongBtn && songFileInput && birthdaySong) {
+    changeSongBtn.addEventListener('click', () => {
+      songFileInput.click();
+    });
+
+    songFileInput.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (file) {
+        const fileUrl = URL.createObjectURL(file);
+        birthdaySong.src = fileUrl;
+        sounds.playBirthdaySong();
+      }
+    });
+  }
 
   // Candle Blowing Action Buttons
   const heroBlowBtn = document.getElementById('blowCandlesBtn');

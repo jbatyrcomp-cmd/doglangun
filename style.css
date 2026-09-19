@@ -230,6 +230,29 @@ body.theme-lacyn {
   box-shadow: 0 0 20px var(--gold-glow);
 }
 
+.song-select-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(246, 200, 81, 0.35);
+  color: #ffd880;
+  padding: 0.5rem 0.95rem;
+}
+
+.song-select-btn:hover {
+  background: rgba(246, 200, 81, 0.2);
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 16px rgba(246, 200, 81, 0.35);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 680px) {
+  .change-song-text {
+    display: none;
+  }
+  .song-select-btn {
+    padding: 0.5rem 0.75rem;
+  }
+}
+
 /* Audio Equalizer */
 .equalizer {
   display: flex;

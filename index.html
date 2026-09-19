@@ -33,11 +33,16 @@
       <span class="brand-text">Laçyn üçin ýörite • 17.09.2001</span>
     </div>
     <div class="nav-actions">
-      <button class="nav-btn sound-btn" id="musicToggleBtn" title="Aýdym / Saz">
+      <button class="nav-btn sound-btn" id="musicToggleBtn" title="Aýdymy diňle / sakla">
         <div class="equalizer" id="equalizer">
           <span></span><span></span><span></span><span></span>
         </div>
-        <span id="musicBtnLabel">Sazy Başlat</span>
+        <span id="musicBtnLabel">Aýdymy Başlat</span>
+      </button>
+      <input type="file" id="songFileInput" accept="audio/*" style="display:none">
+      <button class="nav-btn song-select-btn" id="changeSongBtn" title="Öz aýdymyňy saýla (.mp3, .m4a, .wav)">
+        <span>🎵</span>
+        <span class="change-song-text">Aýdym Saýla</span>
       </button>
       <a href="#giftSection" class="nav-btn special-gift-nav" title="Iň esasy sowgady gör">
         <span>🎁</span>
@@ -45,6 +50,14 @@
       </a>
     </div>
   </nav>
+
+  <!-- BACKGROUND BIRTHDAY SONG AUDIO -->
+  <audio id="birthdaySong" preload="auto" loop>
+    <source src="assets/aydym.mp3" type="audio/mpeg">
+    <source src="assets/aydym.ogg" type="audio/ogg">
+    <source src="assets/aydym.m4a" type="audio/mp4">
+    <source src="assets/aydym.wav" type="audio/wav">
+  </audio>
 
   <!-- MAIN SCROLL CONTAINER -->
   <main class="page-container">
