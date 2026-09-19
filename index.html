@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="tk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doglan Günüň Gutly Bolsun, Laçyn! 🎉 25 Ýaş</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Great+Vibes&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="theme-lacyn">
+
+  <!-- Interactive 3D Canvas Background (Twinkling Stars & Soft Floating Petals) -->
+  <canvas id="fireworksCanvas"></canvas>
+
+  <!-- Ambient Luxury Glow Orbs -->
+  <div class="ambient-glow glow-gold"></div>
+  <div class="ambient-glow glow-rose"></div>
+  <div class="ambient-glow glow-violet"></div>
+
+  <!-- Floating Balloons Layer -->
+  <div class="balloons-container" id="balloonsContainer"></div>
+
+  <!-- Floating Navigation Controls -->
+  <nav class="floating-nav" id="mainNav">
+    <div class="nav-brand">
+      <span class="pulse-sparkle">✨</span>
+      <span class="brand-text">Laçyn üçin ýörite • 17.09.2001</span>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-btn sound-btn" id="musicToggleBtn" title="Aýdym / Saz">
+        <div class="equalizer" id="equalizer">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <span id="musicBtnLabel">Sazy Başlat</span>
+      </button>
+      <a href="#giftSection" class="nav-btn special-gift-nav" title="Iň esasy sowgady gör">
+        <span>🎁</span>
+        <span>Ajaýyp Sowgat</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- MAIN SCROLL CONTAINER -->
+  <main class="page-container">
+
+    <!-- HERO SECTION: 3D Personalized Greeting -->
+    <section class="hero-3d-card card-tilt" id="heroSection" data-tilt>
+      <div class="hero-backdrop-particles"></div>
+
+      <!-- Crown & Badge Ribbon -->
+      <div class="crown-badge">
+        <span class="crown-icon">👑</span>
+        <span class="badge-text">Günüň Gahrymany & Mertebeli Göwheri</span>
+      </div>
+
+      <!-- Main Name Heading -->
+      <div class="hero-heading-box">
+        <span class="hero-cursive-sub">Mähriban we Eziz</span>
+        <h1 class="hero-glamour-name">LAÇYN</h1>
+        <div class="name-underline-sparkle"></div>
+      </div>
+
+      <!-- Prominent 3D Date & Numbers Highlight -->
+      <div class="numbers-spotlight-rack">
+        <div class="spotlight-stat stat-date">
+          <span class="stat-label">DOGLAN SENESI</span>
+          <span class="stat-number glow-date">17.09.2001</span>
+          <span class="stat-sub">Ýagty dünýä inen güni</span>
+        </div>
+
+        <div class="spotlight-divider">✦</div>
+
+        <div class="spotlight-stat stat-age">
+          <span class="stat-label">ÝAŞ TOÝY</span>
+          <span class="stat-number glow-number counter-animate" data-target="25">25</span>
+          <span class="stat-sub">Bagtly & Rowaç Ýaş</span>
+        </div>
+
+        <div class="spotlight-divider">✦</div>
+
+        <div class="spotlight-stat stat-city">
+          <span class="stat-label">HÄZIRKI PURSADY</span>
+          <span class="stat-number glow-tashkent">Daşkent</span>
+          <span class="stat-sub">Talyplyk & Belent Maksatlar</span>
+        </div>
+      </div>
+
+      <!-- Main Heartfelt Greeting Message -->
+      <div class="hero-letter-glass">
+        <p class="greeting-paragraph">
+          kursdasymyz <strong>Laçyn</strong>! Sizi 25 ýaşyňyz — çärýek asyrlyk şanly doglan günüňiz bilen tüýs ýürekden
+          gutlaýarys!
+          Häzirki wagtda gözel Daşkent şäherinde alyp barýan abraýly okuwlaryňyzda, ylym-bilim ýoluňyzda hemişe uly
+          üstünlikler,
+          ýagty geljek we beýik abraý ýaran bolsun! Kalbyňyz hemişe bahar ýaly gülläp, ýylgyryş ýüzüňizden hiç wagt
+          gitmesin!
+        </p>
+      </div>
+
+      <!-- Section Interactive Buttons -->
+      <div class="animated-btn-row">
+        <button id="blowCandlesBtn" class="anim-btn btn-primary-gold">
+          <span class="btn-bubble-effect"></span>
+          <span class="btn-icon">🎂</span>
+          <span id="blowBtnText">25 Ýaş Şemini Üfle & Arzuw Et!</span>
+        </button>
+
+        <a href="#statsSection" class="anim-btn btn-secondary-glass">
+          <span class="btn-icon">⏳</span>
+          <span>Ömür Hasaplaýjysy</span>
+        </a>
+
+        <a href="#albumSection" class="anim-btn btn-accent-rose">
+          <span class="btn-icon">📸</span>
+          <span>Ajaýyp Pursatlar</span>
+        </a>
+
+        <a href="#giftSection" class="anim-btn btn-special-surprise">
+          <span class="btn-icon">🎁</span>
+          <span>Sowgady Açyp Geýip Gör!</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- SECTION 2: 25 ÝYL STATISTIKASY (Animated Numbers Emphasis) -->
+    <section class="section-block" id="statsSection">
+      <div class="section-title-wrap">
+        <span class="section-subtitle">Sanyň Gudraty</span>
+        <h2 class="section-heading">25 Ýyllyk Bagtly Ýol — Sanlarda</h2>
+        <div class="gold-line"></div>
+      </div>
+
+      <div class="stats-counter-grid">
+        <div class="stat-card card-tilt" data-tilt>
+          <div class="stat-card-icon">☀️</div>
+          <div class="stat-big-num counter-animate" data-target="9131">0</div>
+          <div class="stat-card-title">Gün</div>
+          <div class="stat-card-desc">Bagtly, ýylgyryşly we manyly günler</div>
+          <button class="mini-pulse-btn" onclick="triggerEffect(this, 'gün')">💖 Şatlyk goş</button>
+        </div>
+
+        <div class="stat-card card-tilt" data-tilt>
+          <div class="stat-card-icon">🌙</div>
+          <div class="stat-big-num counter-animate" data-target="300">0</div>
+          <div class="stat-card-title">Aý</div>
+          <div class="stat-card-desc">Maşgala söýgüsi we dostluk ýyllary</div>
+          <button class="mini-pulse-btn" onclick="triggerEffect(this, 'aý')">✨ Ýagtylyk ber</button>
+        </div>
+
+        <div class="stat-card card-tilt" data-tilt>
+          <div class="stat-card-icon">🎓</div>
+          <div class="stat-big-num glow-gold-num counter-animate" data-target="100">0</div>
+          <div class="stat-card-title">% Üstünlik</div>
+          <div class="stat-card-desc">Daşkentdäki okuw we ylmy üstünlikler</div>
+          <button class="mini-pulse-btn" onclick="triggerEffect(this, 'okuw')">🚀 Maksada ýet</button>
+        </div>
+
+        <div class="stat-card card-tilt" data-tilt>
+          <div class="stat-card-icon">💎</div>
+          <div class="stat-big-num counter-animate" data-target="219144">0</div>
+          <div class="stat-card-title">Sagat</div>
+          <div class="stat-card-desc">Iň süýji ýatlamalar we rowaçlyk</div>
+          <button class="mini-pulse-btn" onclick="triggerEffect(this, 'sagat')">🌟 Nur çaý</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: 3D CAKE WITH 25 CANDLE -->
+    <section class="section-block" id="cakeSection">
+      <div class="section-title-wrap">
+        <span class="section-subtitle">Baýramçylyk Süýjüligi</span>
+        <h2 class="section-heading">Laçynyň 25 Ýaş Torty</h2>
+        <div class="gold-line"></div>
+      </div>
+
+      <div class="cake-container-3d card-tilt" id="cakeCard" data-tilt>
+        <div class="cake-card-status">
+          <span class="badge-pill" id="cakeStatusBadge">🕯️ 25 ýaş şemleri ýanyp dur</span>
+        </div>
+
+        <div class="cake-stage">
+          <div class="birthday-cake" id="cakeElement">
+            <!-- 25 Years Number Candles -->
+            <div class="candles-rack">
+              <div class="candle candle-num-2">
+                <div class="flame" id="flame1"></div>
+                <div class="smoke" id="smoke1"></div>
+                <div class="candle-digit">2</div>
+              </div>
+              <div class="candle candle-num-5">
+                <div class="flame" id="flame2"></div>
+                <div class="smoke" id="smoke2"></div>
+                <div class="candle-digit">5</div>
+              </div>
+            </div>
+
+            <!-- Cake Tier 1 (Top) with berries -->
+            <div class="cake-tier tier-top">
+              <div class="frosting-drips"></div>
+              <div class="berries">
+                <span>🍓</span><span>🫐</span><span>🍓</span>
+              </div>
+            </div>
+            <!-- Cake Tier 2 (Middle) -->
+            <div class="cake-tier tier-mid">
+              <div class="cream-ribbon"></div>
+              <div class="gold-piping">✦ LAÇYN ✦</div>
+            </div>
+            <!-- Cake Tier 3 (Bottom) -->
+            <div class="cake-tier tier-bot">
+              <div class="gold-pearls"></div>
+            </div>
+            <div class="cake-plate"></div>
+          </div>
+        </div>
+
+        <div class="cake-actions-row">
+          <button id="blowCandlesActionBtn" class="anim-btn btn-primary-gold">
+            <span class="btn-icon">💨</span>
+            <span id="cakeActionText">Şemleri Üfle & Arzuw Et!</span>
+          </button>
+          <button id="confettiBurstBtn" class="anim-btn btn-accent-rose">
+            <span class="btn-icon">🎆</span>
+            <span>Salýut At!</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: 3D PHOTO GALLERY / TASHKENT STUDY & BEAUTIFUL MOMENTS -->
+    <section class="section-block" id="albumSection">
+      <div class="section-title-wrap">
+        <span class="section-subtitle">Laçynyň Ajaýyp Pursatlary</span>
+        <h2 class="section-heading">Ýatlamalar & Daşkentdäki Okuw Ýyllary</h2>
+        <div class="gold-line"></div>
+      </div>
+
+      <div class="gallery-3d-grid">
+        <!-- Photo 1: Tashkent Study & Certificate -->
+        <div class="photo-card card-tilt" data-tilt>
+          <div class="photo-polaroid">
+            <div class="tape-tag">Daşkent • Okuw 🎓</div>
+            <div class="photo-img-box">
+              <img src="assets/photo_study.png" alt="Laçyn Daşkentde okuwda diplom we üstünlik">
+            </div>
+            <div class="photo-meta">
+              <h3>Ylym & Bilim Ýoly</h3>
+              <p>Ahmad Temur şäherçesinde, abraýly sertifikat we üstünlikli talyplyk pursady. Geljegiň uly hünärmeni!
+              </p>
+              <button class="anim-btn mini-btn"
+                onclick="openPhotoViewer('assets/photo_study.png', 'Daşkentde Okuw & Üstünlik')">🔍 Ulaldyp Gör</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 2: Portrait with Golden Aura -->
+        <div class="photo-card card-tilt" data-tilt>
+          <div class="photo-polaroid">
+            <div class="tape-tag">Gözellik & Mertebe ✨</div>
+            <div class="photo-img-box">
+              <img src="assets/photo_portrait.png" alt="Laçyn owadan portret">
+            </div>
+            <div class="photo-meta">
+              <h3>Mähirli Ýylgyryş</h3>
+              <p>Gözleri nurlu, kalby arassa Laçynyň iň ajaýyp portreti. Bu gözellik hemişe dünýäni bezesin!</p>
+              <button class="anim-btn mini-btn"
+                onclick="openPhotoViewer('assets/photo_portrait.png', 'Mähirli Ýylgyryş')">🔍 Ulaldyp Gör</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 3: Traditional Event / Elegance -->
+        <div class="photo-card card-tilt" data-tilt>
+          <div class="photo-polaroid">
+            <div class="tape-tag">Milli Buýsanç 👑</div>
+            <div class="photo-img-box">
+              <img src="assets/photo_event.png" alt="Laçyn milli lybasda">
+            </div>
+            <div class="photo-meta">
+              <h3>Milli Lybasda</h3>
+              <p>Milli nagyşly mahmal dony bilen toý-baýramyň bezegi bolan nurana keşbi.</p>
+              <button class="anim-btn mini-btn" onclick="openPhotoViewer('assets/photo_event.png', 'Milli Lybasda')">🔍
+                Ulaldyp Gör</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 4: Family & Love -->
+        <div class="photo-card card-tilt" data-tilt>
+          <div class="photo-polaroid">
+            <div class="tape-tag">Söýgi & Mähir ❤️</div>
+            <div class="photo-img-box">
+              <img src="assets/photo_family.png" alt="Laçyn körpe gyzjagaz bilen">
+            </div>
+            <div class="photo-meta">
+              <h3>Ýakyn Mähir</h3>
+              <p>Ýürekleri ýyladýan mähir we bagtly pursatlar. Durmuşyňyz hemişe şeýle şatlykly bolsun!</p>
+              <button class="anim-btn mini-btn" onclick="openPhotoViewer('assets/photo_family.png', 'Ýakyn Mähir')">🔍
+                Ulaldyp Gör</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: GRAND FINALE SURPRISE GIFT (IŇ ESASY SOWGAT - GEÝIP GÖRMÜŞ) -->
+    <section class="section-block special-gift-section" id="giftSection">
+      <div class="gift-spotlight-backdrop"></div>
+
+      <div class="section-title-wrap">
+        <span class="section-subtitle">Iň Soňky & Ajaýyp Syrymyz</span>
+        <h2 class="section-heading gold-shimmer">Laçyn Üçin Ýörite Alnan Sowgat 🎁</h2>
+        <p class="gift-intro-sub">
+          "Bu sowgat ýöne bir zat däl — bu saňa bolan iň uly söýgimiziň, hormatymyzyň nyşany. Açyp gör we saňa nähili
+          ýaraşýandygyny synla!"
+        </p>
+        <div class="gold-line"></div>
+      </div>
+
+      <!-- 3D Interactive Surprise Box -->
+      <div class="grand-gift-interactive-card card-tilt" id="grandGiftCard" data-tilt>
+
+        <!-- Closed Box View -->
+        <div class="gift-unopened-view" id="giftUnopenedView">
+          <div class="gift-3d-box" id="mainGiftBox">
+            <div class="gift-box-lid" id="mainGiftLid">
+              <div class="golden-bow">
+                <div class="bow-petal bow-l"></div>
+                <div class="bow-petal bow-r"></div>
+                <div class="bow-knot">✦</div>
+              </div>
+              <div class="lid-stripe"></div>
+            </div>
+            <div class="gift-box-base">
+              <div class="base-stripe"></div>
+              <div class="sparkle-layer"></div>
+            </div>
+          </div>
+
+          <div class="gift-prompt-box">
+            <p class="gift-hint-text">👆 Sowgat gutusyna basyň ýa-da aşakdaky düwmäni basyň!</p>
+            <button id="openSurpriseGiftBtn" class="anim-btn grand-open-btn">
+              <span class="btn-bubble-effect"></span>
+              <span class="btn-icon">🔓</span>
+              <span>Sowgady Aç & Laçyna Görkez!</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Opened State: Revealed Clothing & Fitting Experience -->
+        <div class="gift-revealed-view" id="giftRevealedView" style="display:none;">
+          <div class="revealed-header">
+            <span class="congrats-ribbon">AÝRATYN SOWGAT ŞU ÝERDE! ✨</span>
+            <h3 class="revealed-title">Gülli-Narly Milli Lybas & Ýörite Sumkasy</h3>
+            <p class="revealed-note">
+              "Eziz Laçyn, bu ajaýyp nagyşly lybas we sumka hut seniň üçin saýlanyp alyndy. Saňa biçak uly mertebe we
+              gözellik berer! Toý-baýramlarda guwanyp geý!"
+            </p>
+          </div>
+
+          <!-- 3D Fitting / Gift Showcase Area -->
+          <div class="gift-fitting-stage">
+
+            <!-- Left: The Gift Image with zoom & glow -->
+            <div class="gift-display-col">
+              <div class="gift-photo-frame">
+                <div class="gift-badge-tag">Alnan Sowgadyňyz 🎁</div>
+                <img id="mainGiftPhoto" src="assets/gift_clothing.jpg" alt="Laçyn üçin sowgat lybas we sumka">
+                <div class="gift-photo-overlay">
+                  <span>Narly & Gülli Dokama Lybas</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Interactive Virtual Fitting & Try-On Simulation -->
+            <div class="gift-fitting-col">
+              <div class="tryon-panel">
+                <div class="panel-tag">Ýaraşyk Synagy (Virtual Fitting) 👗</div>
+                <h4>Laçyn, bu lybas saňa nähili ýaraşar?</h4>
+                <p>Aşakdaky düwmeleri basyp, lybasyň gözelligini dürli görnüşde synlaň:</p>
+
+                <div class="tryon-preview-box" id="tryonBox">
+                  <img class="tryon-base-img" src="assets/photo_portrait.png" alt="Laçyn">
+                  <div class="tryon-garment-overlay" id="tryonOverlay">
+                    <img src="assets/gift_clothing.jpg" alt="Sowgat geýim">
+                  </div>
+                  <div class="sparkle-watermark">Laçyna Gaty Ýaraşýar! ✨</div>
+                </div>
+
+                <div class="tryon-controls-row">
+                  <button class="anim-btn fitting-btn active" id="btnShowDress" onclick="toggleFittingMode('gift')">
+                    <span>👗 Sowgady Synla</span>
+                  </button>
+                  <button class="anim-btn fitting-btn" id="btnShowModel" onclick="toggleFittingMode('tryon')">
+                    <span>✨ Ýaraşygy Görkez</span>
+                  </button>
+                  <button class="anim-btn fitting-btn" id="btnZoomGift"
+                    onclick="openPhotoViewer('assets/gift_clothing.jpg', 'Laçyn Üçin Alnan Ýörite Sowgat')">
+                    <span>🔍 Doly Ekranda Gör</span>
+                  </button>
+                </div>
+
+                <!-- Heart blessings from sender -->
+                <div class="gift-blessing-box">
+                  <div class="blessing-heart">❤️</div>
+                  <div class="blessing-text">
+                    <strong>Saglykda geý, eziz Laçyn!</strong>
+                    <span>Her bir günüň şu lybasyň gülleri ýaly ter, narlary ýaly bereketli we şirin bolsun!</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Re-close button -->
+          <div class="gift-revealed-footer">
+            <button class="anim-btn btn-secondary-glass" onclick="toggleGrandGift()">
+              <span>📦 Gutyny Gaýtadan Ýap</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER WITH SIGNATURE -->
+    <footer class="lacyn-footer">
+      <div class="footer-card card-tilt" data-tilt>
+        <div class="footer-heart-anim">💖</div>
+        <h3 class="footer-name">Laçyn • 17.09.2001 — 25 Ýaş</h3>
+        <p class="footer-wishes">
+          "Daşkentde başlanan bu uly ýoluňyz dünýäniň iň beýik üstünliklerine alyp barsyn!
+          Biziň hemişe guwanjymyz we buýsanjymyz bolup ýaşa!"
+        </p>
+        <div class="footer-date-tag">17-nji Sentýabr, 2026 • Şatlyk we Söýgi Bilen</div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- FULLSCREEN PHOTO MODAL VIEWER -->
+  <div class="photo-modal-overlay" id="photoModal" onclick="closePhotoViewer()">
+    <div class="photo-modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close-icon" onclick="closePhotoViewer()">&times;</button>
+      <img id="modalViewerImg" src="" alt="Doly Surat">
+      <div class="modal-caption" id="modalViewerCaption"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
